@@ -7,6 +7,7 @@ The goal is to gain experience with the following technologies and to create an 
 * Circle CI
 * Docker
 * PostgreSQL
+* MinIO
 
 ## Resources
 
