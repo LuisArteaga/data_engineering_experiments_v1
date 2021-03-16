@@ -7,8 +7,8 @@ import data_extraction_service.api_extraction as extract
 # todo: Creating Streaming Processing Service for API
 # todo: Creating Webscraping Service
 
-city = 'london'
 
-dump = extract.get_current_weather_data(provider='openweathermap.org', city=city)
-
-print(dump)
+if __name__ == "__main__":
+    city = 'london'
+    dump = extract.get_current_weather_data(provider='openweathermap.org', city=city)
+    print(dump)
