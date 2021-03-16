@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
-import api_auth_service.api_keys as ak
-import data_validation_service.check_schema as owms
+import etl_service.api_auth_service.api_keys as ak
+import etl_service.data_validation_service.check_schema as owms
 import requests
 
 
