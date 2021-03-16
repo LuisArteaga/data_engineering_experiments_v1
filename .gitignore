@@ -1,5 +1,5 @@
 # Auth Service
-api_auth_service/.auth/*.txt
+*/api_auth_service/.auth/*.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
