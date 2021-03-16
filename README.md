@@ -3,6 +3,7 @@
 The goal is to gain experience with the following technologies and to create an ETL process:
 
 * Apache Airflow
+* Apache Presto
 * Apache Spark
 * Circle CI
 * Docker
