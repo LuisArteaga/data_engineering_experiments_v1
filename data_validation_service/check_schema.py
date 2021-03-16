@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+
 class SchemaColumns:
     def __init__(self):
         self.json_schema_keys = {"openweathermap.org": ['coord',
