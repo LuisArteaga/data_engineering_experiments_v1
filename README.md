@@ -9,7 +9,8 @@ The goal is to gain experience with the following technologies and to create an 
 * Docker
 * PostgreSQL
 * MinIO
+* Dash
 
 ## Resources
 
-* Weather data: https://openweathermap.org/api
+* Ethereum2 data: https://infura.io/
