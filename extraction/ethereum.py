@@ -4,11 +4,6 @@ import json
 import io
 import api.access as ac
 
-#ToDo: Add Production and Development Mode -> secure=False
-#ToDo: Add Test functionalities
-#ToDo: Add Try and Catch Functionalities
-#ToDo: Add Logs
-
 def extract_blocks(first_block_number: int, last_block_number: int,
                     bucket_name: str, object_name: str, object_folder: str) -> None:
     
@@ -33,10 +28,15 @@ def extract_blocks(first_block_number: int, last_block_number: int,
 
         return json.dumps(eth2_client.get_block(block_number), indent=2).encode('utf-8')
 
-
     for i in range(first_block_number, last_block_number+1):
-        data = __download_block_data(eth2_client = eth2_client, block_number = i)
-        __upload_data(minio_client = minio_client,
-                    bucket_name = bucket_name,
-                    object_name = f'{object_folder}/{object_name}_{i}.json',
-                    data = data)
+        try:
+            data = __download_block_data(eth2_client = eth2_client, block_number = i)      
+            __upload_data(minio_client = minio_client,
+                      bucket_name = bucket_name,
+                      object_name = f'{object_folder}/{object_name}_{i}.json',
+                      data = data)
+        except:
+            print(f'No data for block number {i}')
+        finally:
+            continue
+
