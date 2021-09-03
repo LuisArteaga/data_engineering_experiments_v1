@@ -15,7 +15,9 @@ class SchemaColumns:
                                                         'timezone',
                                                         'id',
                                                         'name',
-                                                        'cod']
+                                                        'cod'],
+                                 "infura.io": ['data',
+                                               'signature']
                                  }
 
 
